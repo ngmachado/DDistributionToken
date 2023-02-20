@@ -1,0 +1,11 @@
+{
+  "name": "DDistributionToken",
+  "version": "0.0.1",
+  "repository": "https://github.com/ngmachado/DDistributionToken",
+  "author": "Axe",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.8.1",
+    "@superfluid-finance/ethereum-contracts": "^1.5.0"
+  }
+}
