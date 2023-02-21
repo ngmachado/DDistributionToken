@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@openzeppelin/contracts-upgradeable": "^4.8.1",
-    "@superfluid-finance/ethereum-contracts": "^1.5.0"
+    "@superfluid-finance/ethereum-contracts": "^1.5.0",
+    "@uma/core": "^2.49.0"
   }
 }

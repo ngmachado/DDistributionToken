@@ -5,7 +5,7 @@ import { ISuperToken } from "@superfluid-finance/ethereum-contracts/contracts/in
 import { SuperTokenV1Library } from "@superfluid-finance/ethereum-contracts/contracts/apps/SuperTokenV1Library.sol";
 import { ERC20Upgradeable } from "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {IDDistributionToken} from "./interfaces/IDDistributionToken.sol";
+import { IDDistributionToken } from "./interfaces/IDDistributionToken.sol";
 
 contract DDistributionToken is IDDistributionToken, ERC20Upgradeable, OwnableUpgradeable {
 
@@ -20,7 +20,7 @@ contract DDistributionToken is IDDistributionToken, ERC20Upgradeable, OwnableUpg
 		string memory symbol,
 		address owner,
 		ISuperToken rewardToken_
-	) public initializer {
+	) public virtual initializer {
 		if(address(rewardToken_) == address(0)) revert ZeroAddress();
 		__ERC20_init(name, symbol);
 		__Ownable_init();
