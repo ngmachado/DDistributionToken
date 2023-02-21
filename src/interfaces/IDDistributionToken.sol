@@ -1,6 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+/**
+ * Interface for the IDDistributionToken
+ * IDDistributionToken is a ERC20 token that can be distributed to IDA index subscribers
+ * A distribution is a transfer of reward tokens from the contract to the index subscribers in one transaction
+ * The contract owner can mint and burn tokens.
+ * Any one can distribute tokens owned by the contract or approve it to transfer tokens from their account
+ */
+
 interface IDDistributionToken  {
 
     error ZeroAmountDistribution(); // 0xc4d0b949
@@ -12,7 +20,7 @@ interface IDDistributionToken  {
     /**
      * @dev Distribute reward tokens to index subscribers
      * @notice Anyone can distribute tokens owned by this contract
-     * @notice If not wanted behavior use _beforeDistribution and _afterDistribution hooks
+     * @notice If behavior not wanted use _beforeDistribution and _afterDistribution hooks
      * @param amount Amount of tokens to distribute
      */
     function distribute(uint256 amount) external;
@@ -20,7 +28,7 @@ interface IDDistributionToken  {
     /**
      * @dev Distribute reward tokens to index subscribers from account
      * @notice Anyone can distribute tokens
-     * @notice If not wanted behavior use _beforeDistribution and _afterDistribution hooks
+     * @notice If behavior not wanted use _beforeDistribution and _afterDistribution hooks
      * @param account Account to transfer tokens from
      * @param amount Amount of tokens to distribute
      */
